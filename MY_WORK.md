@@ -32,11 +32,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | Turki Ali Almutairi |
+| **Student ID** | 443050208 |
+| **University Email** | 443050208@std.psau.edu.sa |
+| **GitHub Username** | Turki0900 |
+| **Repository Link** | https://github.com/Turki0900/OS-Assignment3-Turki-Almutairi  |
  
 ---
 
@@ -132,16 +132,21 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - November 24, 2026, 8:32 PM
+**What I did**: Set up my repository, tested the original program, and implemented Feature 1.
 
 **Details**:
+- Renamed my repository and set my student ID.
+- Ran the original program and saved the baseline output.
+- Added a ReentrantLock to the ReadyQueue class.
+- Protected add(), poll(), processOf(), and snapshot() using try/finally.
+- Compiled and tested the modified program.
 
-**Challenges**:
+**Challenges**: I encountered character encoding errors during compilation.
 
-**Solution**:
+**Solution**: I used UTF-8 encoding to compile the program successfully and tested the ready queue changes.
 
-**Time spent**:
+**Time spent**: Approximately 1 hour
 
 ---
 
