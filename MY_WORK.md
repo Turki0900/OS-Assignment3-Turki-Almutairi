@@ -150,16 +150,20 @@
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - November 25, 2026, 2:33 PM
+**What I did**: Implemented Feature 2 by protecting the shared statistics.
 
 **Details**:
+- Added a ReentrantLock named statsLock to SharedStats.
+- Protected incrementContextSwitch(), incrementCompletedProcess(), and addServiceTime().
+- Protected all three getter methods using the same lock.
+- Preserved the original counter operations and RaceWindow.pause().
 
-**Challenges**:
+**Challenges**: Shared statistics were vulnerable to race conditions and lost updates.
 
-**Solution**:
+**Solution**: Used a single ReentrantLock with try/finally to protect read and write operations.
 
-**Time spent**:
+**Time spent**: Approximately 1 hour and 15 minutes
 
 ---
 
