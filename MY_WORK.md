@@ -167,16 +167,20 @@
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - November 26, 2026, 3:50 PM
+**What I did**: Implemented Feature 3 by replacing busy waiting with a counting semaphore.
 
 **Details**:
+- Added a counting semaphore initialized to zero.
+- Used release() when a process is added to the ready queue.
+- Used acquire() to block CPUs until a process becomes available.
+- Added a method to wake up waiting CPUs when all processes are completed.
 
-**Challenges**:
+**Challenges**: Ensuring that waiting CPUs terminate without getting stuck on the semaphore.
 
-**Solution**:
+**Solution**: Released semaphore permits when all processes were completed. Tested the program and confirmed that all four verification checks passed, with zero busy-waiting polls.
 
-**Time spent**:
+**Time spent**: Approximately 1 hour and 25 minutes.
 
 ---
 
