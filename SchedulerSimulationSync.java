@@ -62,9 +62,11 @@ class SharedStats {
 
     // TODO Feature 2: declare the lock(s) protecting the three shared variables above here.
     // Think about it: ONE lock for the three variables, or ONE lock PER variable? (you must justify it in MY_WORK.md)
+    // Use one mutex lock to protect all three shared statistics.
     private static final ReentrantLock statsLock = new ReentrantLock();
     public static void incrementContextSwitch() {
         // TODO Feature 2: protect this critical section
+        // Prevent concurrent updates to avoid lost increments.
         statsLock.lock();
         try {
         int tmp = contextSwitchCount;       // 1) read
